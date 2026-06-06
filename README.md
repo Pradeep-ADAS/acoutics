@@ -165,3 +165,40 @@ H2 --> I
 H3 --> I
 ```
 
+Key takeaways from the pipeline are as follows 
+
+- Built a supervised learning pipeline to predict frequency-dependent SAC from experimentally measured foam properties.
+- Evaluated multiple regression algorithms and compared their predictive performance.
+- Random Forest achieved the best overall accuracy across acoustic response predictions. (Metrics are reported in section 10)
+- Additional validation through low-data testing and 4-fold cross-validation confirmed model robustness and generalization capability.
+
+---
+
+📈 **9. Sample Visualizations**
+
+---
+
+📊 **10. Project Outcomes - Key Numbers**
+
+---
+🧭 **11. Future Extension/ Industry Relevance**
+
+- Material Design Optimization – Use the trained model to virtually screen new foam compositions and sandwich configurations, reducing the need for extensive experimental testing.
+
+---
+
+⚠️ **12. Data Note**
+
+This project is based on experimentally generated datasets from Vellore Institute of Technology, Chennai.
+A subset of this work has been published in Data Science and Data Analytics: Opportunities and Challenges (CRC Press).
+Non-proprietary data associated with the publication have been made publicly available in this repository in compliance with confidentiality constraints.
+
+---
+
+👨‍💻 **13. Skills Demonstrated**
+
+Through this project, I demonstrate my ability to work with
+
+- Experimental acoustic data processing & dataset construction.
+- Feature engineering of foam material properties (sandwich structures) to prepare the data for ML application.
+- Impementation and validation of Supervised machine learning for frequency-dependent SAC prediction.
