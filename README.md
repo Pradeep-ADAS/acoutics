@@ -6,7 +6,7 @@ Data-driven machine learning framework to predict frequency-dependent sound abso
 
 Lightweight porous foams are widely used in automotive interiors for noise reduction, passenger comfort, and vibration damping. Components such as headliners, door panels, dashboard insulation, wheel arch liners, and cabin acoustic treatments rely on carefully engineered foam structures to achieve targeted sound absorption performance across a broad frequency range.
 
-This project investigates the relationship between the physical characteristics of polyurethane (PU)-based composite foams and their acoustic behavior. Using experimentally measured material properties such as thickness, density, porosity, and pore size, multiple machine learning models were developed to predict frequency-dependent Sound Absorption Coefficients (SAC). The objective is to evaluate the feasibility of using data-driven methods to estimate acoustic performance and reduce the need for extensive experimental testing during material development.
+This project investigates the relationship between the physical characteristics of polyurethane (PU)-based composite foams and their acoustic behavior. Using experimentally measured material properties (thickness, density, porosity, and pore size) and corresponding sound absorption coefficient (SAC) values as ground truth, multiple machine learning models were developed to learn and predict frequency-dependent acoustic performance of polyurethane-based foams.
 
 <p align="center">
   <img src="Acoustics1.jfif" width="35%"><br>
@@ -86,7 +86,7 @@ The experimental data captures both material structural properties and acoustic 
 🔬 **Experimental Data Acquisition Methods:**
 
 * Foam samples were fabricated using a single-shot free-rise polyurethane foaming process.
-* Frequency-dependent Sound Absorption Coefficient (SAC) values were measured using an impedance tube setup in accordance with ASTM E1050 standards.
+* Frequency-dependent Sound Absorption Coefficient (SAC) values were measured using an impedance tube setup in accordance with ASTM E1050 standards. The recorded microphone signals were post-processed in MATLAB using the transfer function method to compute the reflection coefficient, from which SAC was derived.
 * Microstructural analysis was performed using FESEM imaging to capture pore morphology.
 * Pore size distribution was estimated using ImageJ-based image processing techniques.
 * Porosity was evaluated using a gas-based non-acoustic measurement method based on the ideal gas law.
@@ -96,6 +96,25 @@ The experimental data captures both material structural properties and acoustic 
   <b> Impedance Tube Setup for SAC measurement</b>
 </p>
 
+* A total of 100 sandwich-structured foam specimens were derived from laboratory experiments. Each specimen follows a 4-layer configuration, represented using a symbolic encoding scheme based on layer composition.
+  * a – Pure polyurethane (PU) foam
+  * b – PU foam with 5% wood powder reinforcement
+  * c – PU foam with 10% wood powder reinforcement
+  * d – PU foam with 15% wood powder reinforcement
+
 ---
 
 📊 **7. Final Dataset for ML**
+
+🧩 Independent Features (Input Variables)
+* Thickness (×10⁻³ m) – Physical thickness of the foam sample, which influences sound wave propagation and energy dissipation.
+* Area Density (×10⁻³ kg/m²) – Mass per unit area of the sample, representing material compactness.
+* Porosity (%) – Fraction of void volume within the foam structure, affecting air flow and sound absorption.
+* Pore Size (μm) – Average size of internal pores, which governs acoustic wave interaction within the material structure.
+
+🎯 Dependent Features (Target Variables)
+* Sound Absorption Coefficient (SAC) – Frequency-dependent measure of the material’s ability to absorb incident sound energy, evaluated across 6 standard central frequencies in the range 125 Hz - 4000 Hz.
+
+---
+
+
