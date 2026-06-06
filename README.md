@@ -41,7 +41,7 @@ Key objectives include:
 
 ---
 
-🛠 4. Tech Stack
+🛠 4. **Tech Stack**
 
 Key techniques used in the prediction of acoustic performance of polyurethene based composite foams include:
 
@@ -54,6 +54,46 @@ Key techniques used in the prediction of acoustic performance of polyurethene ba
 
 ---
 
+🧱 5. **Test Sample Structure: 4-Layer Sandwich Configuration**
 
+Each experimental specimen is constructed as a four-layer sandwich structure, where each layer corresponds to a specific foam type defined by its material composition (e.g., PU foam with varying natural fiber content).
 
+The overall sample configuration is represented using a four-character code (e.g., aaaa, aaab, aaba), where:
 
+- Each character represents one foam layer in the stack <br>
+- Each layer has a defined material composition (PU or PU + fiber content) <br>
+- A full 4-character code represents the complete test specimen
+
+<table>
+  <tr>
+    <td align="center">
+      <b>Simplified Animation of Sandwich Structure </b><br>
+      <img src="Acoustic_GIF.gif" width="700"/>
+    </td>
+  </tr>
+</table>
+
+---
+
+📊 **6. Data Collection for ML Model Training – Lab Tests**
+
+The dataset used for machine learning model development is obtained from controlled laboratory experiments on polyurethane-based composite foams reinforced with natural fillers such as sawdust and rice husk.
+
+The experimental data captures both material structural properties and acoustic response characteristics across multiple frequency ranges.
+
+🔬 **Experimental Data Acquisition Methods:**
+
+* Foam samples were fabricated using a single-shot free-rise polyurethane foaming process.
+* Frequency-dependent Sound Absorption Coefficient (SAC) values were measured using an impedance tube setup in accordance with ASTM E1050 standards.
+* Microstructural analysis was performed using FESEM imaging to capture pore morphology.
+* Pore size distribution was estimated using ImageJ-based image processing techniques.
+* Porosity was evaluated using a gas-based non-acoustic measurement method based on the ideal gas law.
+
+<p align="center">
+  <img src="Impendance_Tube_Setup.PNG" width="50%"><br>
+  <b> Impedance Tube Setup for SAC measurement</b>
+</p>
+
+---
+
+📊 **7. Final Dataset for ML**
