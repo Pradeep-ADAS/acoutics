@@ -117,4 +117,51 @@ The experimental data captures both material structural properties and acoustic 
 
 ---
 
+🧠 **8. Machine Learning Pipeline Overview**
+
+The following flowchart summarizes the complete workflow from experimental data acquisition to final model selection and validation.
+
+```mermaid
+flowchart TD
+
+A[Experimental Lab Data] --> B[Material System Definition]
+
+B --> B1[Layer Encoding - a, b, c, d - Sandwich Structure ]
+B --> B2[Material Properties: Thickness, Density, Porosity, Pore Size]
+
+B1 --> C[Feature Preparation - Backward Elimination & Forward Selection]
+B2 --> C
+
+C --> D[Train-Test Split - 90:10]
+
+D --> E[Model Training]
+
+E --> M1[Random Forest]
+E --> M2[Decision Tree]
+E --> M3[Support Vector Regression]
+E --> M4[Linear Regression]
+E --> M5[Polynomial Regression]
+
+M1 --> F[Performance Evaluation]
+M2 --> F
+M3 --> F
+M4 --> F
+M5 --> F
+
+F --> F1[MSE]
+F --> F2[MAE]
+F --> F3[R² Score]
+
+F --> G[Best Model Selection: Random Forest]
+
+G --> H[Validation Phase Random Forest Only]
+
+H --> H1[Test for Data Efficiency - Reduced Training Data Evaluation]
+H --> H2[Test for Model Robustness - k-Fold Cross Validation]
+H --> H3[Test for Overfitting risk - Training error vs Testing error]
+
+H1 --> I[All validation checks confirm model stability and generalization capability]
+H2 --> I
+H3 --> I
+```
 
