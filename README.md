@@ -1,7 +1,5 @@
 # Automotive-NVH-Acoustic-Materials-ML
 
-Data-driven machine learning framework to predict frequency-dependent sound absorption of automotive acoustic foam (Polyurethene) materials.
-
 ⭐ **1. Introduction**
 
 Lightweight porous foams are widely used in automotive interiors for noise reduction, passenger comfort, and vibration damping. Components such as headliners, door panels, dashboard insulation, wheel arch liners, and cabin acoustic treatments rely on carefully engineered foam structures to achieve targeted sound absorption performance across a broad frequency range.
@@ -176,34 +174,47 @@ Key takeaways from the pipeline are as follows
 
 📈 **9. Sample Visualizations**
 
+
 <table>
   <tr>
-    <td align="center">
-      <img src="Resources/Configure_Suspension_Settings.PNG" width="100%"/><br>
-      <sub><b>Vehicle & Rider Setup</b>: Set suspension and damping properties to match vehicle dynamics performance.</sub>
+    <td align="center" width="50%">
+      <img src="Random_Forest.PNG" style="height:300px; width:auto; object-fit:contain;" /><br>
+      <sub><b>Random Forest Regressor Setup </b>: An ensemble of decision trees used for regression tasks in machine learning</sub>
     </td>
-    <td align="center">
-      <img src="Resources/Configure_Road_and_Driver.PNG" width="100%"/><br>
-      <sub><b>Road & Environment Setup</b>: Configure road profiles, friction levels and driving conditions to match real world.</sub>
-    </td>
+
+  <td align="center" width="50%">
+    <img src="Results-1.PNG" height="300px"/><br>
+    <sub><b>Sound Absorption Coefficient (0–1)</b>: Experimental and model-predicted values (Random Forest & Decision Tree) show close agreement at 6 central frequencies</sub>
+  </td>
   </tr>
+
   <tr>
-    <td align="center">
-      <img src="Resources/Configure_Bike_and_Driver.PNG" width="100%"/><br>
-      <sub><b>Suspension Tuning</b>: Defines 2-wheeler parameters (inclusing frame CAD) and rider inputs/ driver behaviour to match baseline dynamics.</sub>
+    <td align="center" width="50%">
+      <img src="Results-2.PNG" style="height:300px; width:auto; object-fit:contain;" /><br>
+      <sub><b>Mean Square Error</b>: Both models show low error (with respect to scale of actual quanity i.e. 0-1), with Random Forest performing comparatively better</sub>
     </td>
-    <td align="center">
-      <img src="Resources/Sensor_Settings.png" width="100%"/><br>
-      <sub><b>Sensor Configuration</b>: Define virtual sensor locations to estimate critical quantities and control feedback.</sub>
+
+  <td align="center" width="50%">
+      <img src="Results-3.PNG" style="height:300px; width:auto; object-fit:contain;" /><br>
+      <sub><b>SAC Comparison at 500 Hz</b>: Predicted vs Actual Sound Absorption Coefficient (SAC) values for selected test samples</sub>
     </td>
   </tr>
 </table>
 
 
-
 ---
 
 📊 **10. Project Outcomes - Key Numbers**
+
+- 🚀 **6** - Total number of ML regression models evaluated (including baseline and ensemble methods).
+
+- 📈 **0.93** - Highest training R² score achieved using Random Forest Regression at 500 Hz.
+
+- 🎯 **0.90** - Highest test R² score achieved using Random Forest Regression at 500 Hz. The small gap between training and test performance indicates **good generalization with limited overfitting**.
+
+- 📉 **±0.02 R²** - Standard deviation across 4-fold cross-validation results, showing **stable and consistent model performance across folds**.
+
+- ⚡ **2+ hours → 10 seconds** - Reduction in time required to estimate Sound Absorption Coefficient (SAC), from experimental measurement to ML-based prediction.
 
 ---
 🧭 **11. Future Extension/ Industry Relevance**
