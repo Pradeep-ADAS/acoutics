@@ -176,6 +176,31 @@ Key takeaways from the pipeline are as follows
 
 📈 **9. Sample Visualizations**
 
+<table>
+  <tr>
+    <td align="center">
+      <img src="Resources/Configure_Suspension_Settings.PNG" width="100%"/><br>
+      <sub><b>Vehicle & Rider Setup</b>: Set suspension and damping properties to match vehicle dynamics performance.</sub>
+    </td>
+    <td align="center">
+      <img src="Resources/Configure_Road_and_Driver.PNG" width="100%"/><br>
+      <sub><b>Road & Environment Setup</b>: Configure road profiles, friction levels and driving conditions to match real world.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="Resources/Configure_Bike_and_Driver.PNG" width="100%"/><br>
+      <sub><b>Suspension Tuning</b>: Defines 2-wheeler parameters (inclusing frame CAD) and rider inputs/ driver behaviour to match baseline dynamics.</sub>
+    </td>
+    <td align="center">
+      <img src="Resources/Sensor_Settings.png" width="100%"/><br>
+      <sub><b>Sensor Configuration</b>: Define virtual sensor locations to estimate critical quantities and control feedback.</sub>
+    </td>
+  </tr>
+</table>
+
+
+
 ---
 
 📊 **10. Project Outcomes - Key Numbers**
